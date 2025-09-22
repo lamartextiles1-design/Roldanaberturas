@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="facebook-domain-verification" content="k2a3gjep9sz3ixf3ycnpkduxj4n7pz" />
+  <title>Roldan Aberturas - Especialistas en Puertas y Ventanas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .poppins {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Roldan Aberturas Construction Theme */
+    .power-bg {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 25%, #4a4a4a 50%, #6b6b6b 75%, #8a8a8a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .power-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 140, 0, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 165, 0, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(255, 69, 0, 0.2) 0%, transparent 50%);
+      opacity: 0.8;
+      z-index: 1;
+    }
+    
+    .power-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Construction colors without glow */
+    .text-blue {
+      color: #ff8c00;
+    }
+    
+    .text-light-blue {
+      color: #ffa500;
+    }
+    
+    .text-sky {
+      color: #ff4500;
+    }
+    
+    .text-black-title {
+      color: #000000;
+      font-weight: 900;
+    }
+
+    /* Modern cards */
+    .power-card {
+      background: linear-gradient(145deg, rgba(26, 26, 26, 0.9), rgba(255, 140, 0, 0.2));
+      border: 2px solid #ff8c00;
+      backdrop-filter: blur(20px);
+      box-shadow: 
+        0 0 30px rgba(255, 140, 0, 0.3),
+        inset 0 0 30px rgba(255, 140, 0, 0.1);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .power-card::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #ff8c00, #ffa500, #ff4500, #ff8c00);
+      background-size: 400% 400%;
+      animation: oceanGlow 3s ease infinite;
+      z-index: -1;
+      border-radius: inherit;
+    }
+    
+    .power-card:hover {
+      transform: translateY(-15px) scale(1.03);
+      box-shadow: 
+        0 25px 50px rgba(255, 140, 0, 0.4),
+        0 0 40px rgba(255, 165, 0, 0.3);
+      border-color: #ffa500;
+    }
+
+    @keyframes oceanGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Modern geometric shapes */
+    .power-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(45deg, #ff8c00, #ffa500);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(255, 140, 0, 0.3);
+    }
+
+    /* Grid pattern */
+    .grid-bg {
+      background-image: 
+        linear-gradient(90deg, rgba(255, 140, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255, 140, 0, 0.1) 1px, transparent 1px);
+      background-size: 40px 40px;
+      position: relative;
+    }
+    
+    .grid-bg::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 25% 25%, rgba(255, 165, 0, 0.2) 2px, transparent 2px),
+        radial-gradient(circle at 75% 75%, rgba(255, 140, 0, 0.2) 2px, transparent 2px);
+      background-size: 40px 40px;
+    }
+
+    /* Smooth animations */
+    .float-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* Pulse animation */
+    .pulse-blue {
+      animation: pulseOcean 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulseOcean {
+      0%, 100% { 
+        box-shadow: 0 0 20px #ff8c00, 0 0 40px #ff8c00;
+        border-color: #ff8c00;
+      }
+      50% { 
+        box-shadow: 0 0 30px #ffa500, 0 0 60px #ffa500;
+        border-color: #ffa500;
+      }
+    }
+
+    /* Modern panels */
+    .modern-panel {
+      background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(255, 140, 0, 0.3) 100%);
+      border-left: 4px solid #ff8c00;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    
+    .modern-panel:hover {
+      transform: translateX(10px);
+      border-left-color: #ffa500;
+      box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+    }
+
+    /* Wave effect */
+    .wave-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 98px,
+        rgba(255, 140, 0, 0.05) 100px
+      );
+      animation: waveFlow 15s linear infinite;
+    }
+    
+    @keyframes waveFlow {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #1a1a1a;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, #ff8c00, #ffa500);
+      border-radius: 5px;
+    }
+
+    /* WhatsApp button modern style */
+    .whatsapp-modern {
+      background: linear-gradient(135deg, #25d366, #128c7e, #ff8c00);
+      animation: modernPulse 2s infinite;
+      border: 2px solid #ff8c00;
+      box-shadow: 0 0 25px rgba(255, 140, 0, 0.5);
+    }
+    
+    @keyframes modernPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 25px rgba(255, 140, 0, 0.5);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 35px rgba(255, 165, 0, 0.7);
+      }
+    }
+
+    /* Typing effect */
+    .typing-effect {
+      overflow: hidden;
+      border-right: 3px solid #ff8c00;
+      white-space: nowrap;
+      animation: typing 4s steps(50, end), blink-cursor 0.75s step-end infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    
+    @keyframes blink-cursor {
+      from, to { border-color: transparent; }
+      50% { border-color: #ff8c00; }
+    }
+
+    /* Button hover effects */
+    .btn-power {
+      background: linear-gradient(135deg, #ff8c00, #ff4500);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-power::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    
+    .btn-power:hover::before {
+      left: 100%;
+    }
+    
+    .btn-power:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(255, 140, 0, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-white overflow-x-hidden">
+
+  <!-- WAVE BACKGROUND EFFECT -->
+  <div class="wave-bg fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- POWER MOTIONS HEADER -->
+  <header class="power-bg min-h-screen flex items-center relative">
+    <div class="power-content w-full">
+      
+      <!-- Modern Navigation -->
+      <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-xl border-b-2 border-teal-500">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+          <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+              <div class="power-icon mr-4 pulse-blue">
+                <div class="text-white font-bold text-2xl">🏄</div>
+              </div>
+              <span class="text-2xl font-black poppins text-black-title">ROLDAN ABERTURAS</span>
+            </div>
+            
+            <!-- Menu -->
+            <ul class="hidden md:flex space-x-8 text-teal-400 font-bold poppins">
+              <li><a href="#inicio" class="hover:text-cyan-400 transition duration-300 relative group">
+                  INICIO
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></span>
+            </a></li>
+              <li><a href="#nosotros" class="hover:text-cyan-400 transition duration-300 relative group">
+                  NOSOTROS
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></span>
+            </a></li>
+              <li><a href="#servicios" class="hover:text-cyan-400 transition duration-300 relative group">
+                  PRODUCTOS
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></span>
+            </a></li>
+              <li><a href="#contacto" class="hover:text-cyan-400 transition duration-300 relative group">
+                  CONTACTO
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></span>
+            </a></li>
+          </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <div class="max-w-7xl mx-auto px-6 py-20 mt-20">
+        <div class="grid lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
+          
+          <!-- Left Content -->
+            <div class="text-center lg:text-left">
+            <div class="mb-8">
+              <h1 class="text-7xl md:text-8xl font-black poppins float-animation mb-4">
+                <span class="text-black-title">ROLDAN</span>
+                <br>
+                <span class="text-black-title">ABERTURAS</span>
+              </h1>
+              <div class="typing-effect text-2xl md:text-3xl text-cyan-400 font-bold">
+                ESPECIALISTAS EN PUERTAS Y VENTANAS
+              </div>
+              </div>
+              
+            <!-- Modern Stats -->
+            <div class="grid grid-cols-2 gap-6 mb-12">
+              <div class="power-card p-6 rounded-xl">
+                <div class="text-4xl text-blue mb-2 poppins font-black">+500</div>
+                <div class="text-gray-300">PRODUCTOS</div>
+              </div>
+              <div class="power-card p-6 rounded-xl">
+                <div class="text-4xl text-light-blue mb-2 poppins font-black">15+</div>
+                <div class="text-gray-300">AÑOS</div>
+              </div>
+              <div class="power-card p-6 rounded-xl">
+                <div class="text-4xl text-sky mb-2 poppins font-black">+2000</div>
+                <div class="text-gray-300">CLIENTES</div>
+              </div>
+              <div class="power-card p-6 rounded-xl">
+                <div class="text-4xl text-blue mb-2 poppins font-black">CALIDAD</div>
+                <div class="text-gray-300">PREMIUM</div>
+              </div>
+            </div>
+
+            <!-- CTA Button -->
+            <button class="btn-power px-12 py-6 rounded-xl text-xl font-bold poppins text-white border-2 border-teal-500 transition-all duration-300">
+              VER NUESTROS PRODUCTOS
+            </button>
+          </div>
+
+          <!-- Right Content - Modern Image -->
+            <div class="relative">
+            <div class="power-card p-8 rounded-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1581578731548-c6a0c3f2f6c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2126&q=80" 
+                alt="Puertas y ventanas modernas - Roldan Aberturas" 
+                class="w-full h-96 object-cover rounded-lg"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-teal-500/20 via-transparent to-cyan-400/20 rounded-2xl"></div>
+              </div>
+            
+            <!-- Floating elements -->
+            <div class="absolute -top-6 -right-6 power-icon pulse-blue">
+              <div class="text-white font-bold text-xl">🚪</div>
+              </div>
+            <div class="absolute -bottom-6 -left-6 power-icon pulse-blue" style="animation-delay: 1s;">
+              <div class="text-white font-bold text-xl">🏠</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT SECTION - MODERN GRID DESIGN -->
+  <section id="nosotros" class="grid-bg py-32 bg-slate-800 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-20">
+        <h2 class="text-6xl font-black poppins text-blue float-animation mb-8">QUIÉNES SOMOS</h2>
+        <div class="w-32 h-1 bg-gradient-to-r from-teal-400 to-cyan-500 mx-auto"></div>
+      </div>
+      
+      <!-- Modern panels layout -->
+      <div class="grid lg:grid-cols-3 gap-8">
+        
+        <!-- Panel 1 -->
+        <div class="modern-panel p-8 rounded-xl">
+          <div class="power-icon mb-6 mx-auto">
+            <div class="text-white font-bold text-2xl">🏗️</div>
+          </div>
+          <h3 class="text-2xl font-bold poppins text-blue mb-4">MISIÓN</h3>
+          <p class="text-gray-300">Proporcionar soluciones integrales en puertas y ventanas de alta calidad, transformando hogares y espacios comerciales con productos duraderos y estéticamente superiores.</p>
+        </div>
+        
+        <!-- Panel 2 -->
+        <div class="modern-panel p-8 rounded-xl">
+          <div class="power-icon mb-6 mx-auto">
+            <div class="text-white font-bold text-2xl">🚪</div>
+            </div>
+          <h3 class="text-2xl font-bold poppins text-light-blue mb-4">VISIÓN</h3>
+          <p class="text-gray-300">Ser la empresa líder en aberturas en Godoy Cruz, reconocida por nuestra calidad premium, atención personalizada y compromiso con la excelencia en cada proyecto.</p>
+        </div>
+
+        <!-- Panel 3 -->
+        <div class="modern-panel p-8 rounded-xl">
+          <div class="power-icon mb-6 mx-auto">
+            <div class="text-white font-bold text-2xl">⭐</div>
+          </div>
+          <h3 class="text-2xl font-bold poppins text-sky mb-4">VALORES</h3>
+          <p class="text-gray-300">Calidad superior, compromiso con el cliente, innovación constante y responsabilidad social son los valores fundamentales de Roldan Aberturas.</p>
+        </div>
+      </div>
+      
+      <!-- Central Image -->
+      <div class="flex justify-center mt-16">
+        <div class="power-card p-6 rounded-2xl">
+          <img 
+            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+            alt="Puertas y ventanas de calidad en Roldan Aberturas" 
+            class="w-full max-w-2xl h-64 object-cover rounded-lg"
+          />
+        </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- SERVICES SECTION - MODERN GRID DESIGN -->
+  <section id="servicios" class="bg-slate-900 py-32 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <h2 class="text-6xl font-black poppins text-blue float-animation mb-8">NUESTROS PRODUCTOS</h2>
+        <div class="w-32 h-1 bg-gradient-to-r from-teal-400 to-cyan-500 mx-auto"></div>
+      </div>
+      
+      <!-- Modern Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Product 1 -->
+        <div class="power-card p-8 rounded-2xl group">
+          <div class="power-icon mb-6">
+            <div class="text-white font-bold text-xl">🚪</div>
+            </div>
+            <img 
+            src="https://images.unsplash.com/photo-1581578731548-c6a0c3f2f6c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+            alt="Puertas de alta calidad" 
+            class="w-full h-48 object-cover rounded-lg mb-6"
+          />
+          <h3 class="text-2xl font-bold poppins text-blue mb-4">PUERTAS</h3>
+          <p class="text-gray-300 mb-4">Amplia variedad de puertas de entrada, interiores y de seguridad con los mejores materiales y acabados.</p>
+          <div class="flex items-center text-blue-400">
+            <span class="mr-2">•</span>
+            <span class="text-sm font-bold">MATERIALES PREMIUM</span>
+          </div>
+          </div>
+        
+        <!-- Product 2 -->
+        <div class="power-card p-8 rounded-2xl group">
+          <div class="power-icon mb-6">
+            <div class="text-white font-bold text-xl">🪟</div>
+          </div>
+          <img 
+            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+            alt="Ventanas modernas" 
+            class="w-full h-48 object-cover rounded-lg mb-6"
+          />
+          <h3 class="text-2xl font-bold poppins text-light-blue mb-4">VENTANAS</h3>
+          <p class="text-gray-300 mb-4">Ventanas de aluminio, PVC y madera con doble vidrio para máximo aislamiento térmico y acústico.</p>
+          <div class="flex items-center text-sky-400">
+            <span class="mr-2">•</span>
+            <span class="text-sm font-bold">AISLAMIENTO SUPERIOR</span>
+          </div>
+      </div>
+      
+        <!-- Product 3 -->
+        <div class="power-card p-8 rounded-2xl group">
+          <div class="power-icon mb-6">
+            <div class="text-white font-bold text-xl">🔧</div>
+          </div>
+          <img 
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+            alt="Accesorios para puertas y ventanas" 
+            class="w-full h-48 object-cover rounded-lg mb-6"
+          />
+          <h3 class="text-2xl font-bold poppins text-sky mb-4">ACCESORIOS</h3>
+          <p class="text-gray-300 mb-4">Cerraduras, manijas, bisagras, herrajes y todos los accesorios necesarios para completar tu proyecto.</p>
+          <div class="flex items-center text-blue-400">
+            <span class="mr-2">•</span>
+            <span class="text-sm font-bold">CALIDAD GARANTIZADA</span>
+          </div>
+          </div>
+          
+        <!-- Product 4 -->
+        <div class="power-card p-8 rounded-2xl group">
+          <div class="power-icon mb-6">
+            <div class="text-white font-bold text-xl">📐</div>
+          </div>
+          <img 
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+            alt="Servicio de medición e instalación" 
+            class="w-full h-48 object-cover rounded-lg mb-6"
+          />
+          <h3 class="text-2xl font-bold poppins text-blue mb-4">MEDICIÓN E INSTALACIÓN</h3>
+          <p class="text-gray-300 mb-4">Servicio profesional de medición, asesoramiento e instalación por técnicos especializados.</p>
+          <div class="flex items-center text-blue-400">
+            <span class="mr-2">•</span>
+            <span class="text-sm font-bold">TÉCNICOS CERTIFICADOS</span>
+          </div>
+          </div>
+          
+        <!-- Product 5 -->
+        <div class="power-card p-8 rounded-2xl group">
+          <div class="power-icon mb-6">
+            <div class="text-white font-bold text-xl">🛠️</div>
+          </div>
+          <img 
+            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80" 
+            alt="Mantenimiento y reparación" 
+            class="w-full h-48 object-cover rounded-lg mb-6"
+          />
+          <h3 class="text-2xl font-bold poppins text-light-blue mb-4">MANTENIMIENTO</h3>
+          <p class="text-gray-300 mb-4">Servicio de mantenimiento, reparación y ajuste de puertas y ventanas para mantenerlas en perfecto estado.</p>
+          <div class="flex items-center text-sky-400">
+            <span class="mr-2">•</span>
+            <span class="text-sm font-bold">SERVICIO POST-VENTA</span>
+          </div>
+          </div>
+          
+        <!-- Product 6 -->
+        <div class="power-card p-8 rounded-2xl group">
+          <div class="power-icon mb-6">
+            <div class="text-white font-bold text-xl">🎨</div>
+          </div>
+          <img 
+            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2134&q=80" 
+            alt="Diseño personalizado" 
+            class="w-full h-48 object-cover rounded-lg mb-6"
+          />
+          <h3 class="text-2xl font-bold poppins text-sky mb-4">DISEÑO PERSONALIZADO</h3>
+          <p class="text-gray-300 mb-4">Soluciones a medida para proyectos especiales, adaptándonos a las necesidades específicas de cada cliente.</p>
+          <div class="flex items-center text-blue-400">
+            <span class="mr-2">•</span>
+            <span class="text-sm font-bold">SOLUCIONES ÚNICAS</span>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- TESTIMONIALS - MODERN DESIGN -->
+  <section class="power-bg py-32 relative">
+      <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <h2 class="text-6xl font-black poppins text-light-blue float-animation mb-8">LO QUE DICEN NUESTROS CLIENTES</h2>
+        <div class="w-32 h-1 bg-gradient-to-r from-teal-400 to-cyan-500 mx-auto"></div>
+            </div>
+      
+      <!-- Modern testimonials -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="power-card p-8 rounded-2xl">
+              <div class="flex items-center mb-6">
+                <img 
+              class="w-16 h-16 rounded-full border-4 border-blue-400 mr-4" 
+              src="https://randomuser.me/api/portraits/women/32.jpg" 
+              alt="María González"
+            />
+            <div>
+              <h4 class="font-bold poppins text-blue text-lg">Sofía Martínez</h4>
+              <p class="text-sky-400 text-sm">Arquitecta</p>
+                </div>
+              </div>
+          <p class="text-gray-300 italic">"Roldan Aberturas tiene los mejores productos de la región. Su calidad es excepcional y el servicio al cliente es impecable."</p>
+              <div class="flex mt-4">
+            <span class="text-yellow-400">★★★★★</span>
+              </div>
+            </div>
+
+        <div class="power-card p-8 rounded-2xl">
+              <div class="flex items-center mb-6">
+                <img 
+              class="w-16 h-16 rounded-full border-4 border-sky-400 mr-4" 
+              src="https://randomuser.me/api/portraits/men/42.jpg" 
+              alt="Carlos Mendoza"
+            />
+            <div>
+              <h4 class="font-bold poppins text-light-blue text-lg">Diego Rodríguez</h4>
+              <p class="text-sky-400 text-sm">Constructor</p>
+                </div>
+              </div>
+          <p class="text-gray-300 italic">"Desde que trabajo con Roldan Aberturas, no cambio de proveedor. Calidad y precio perfectos para mis proyectos."</p>
+              <div class="flex mt-4">
+            <span class="text-yellow-400">★★★★★</span>
+              </div>
+            </div>
+
+        <div class="power-card p-8 rounded-2xl">
+              <div class="flex items-center mb-6">
+                <img 
+              class="w-16 h-16 rounded-full border-4 border-blue-500 mr-4" 
+              src="https://randomuser.me/api/portraits/women/24.jpg" 
+              alt="Ana Rodríguez"
+            />
+            <div>
+              <h4 class="font-bold poppins text-sky text-lg">Lucía Fernández</h4>
+              <p class="text-sky-400 text-sm">Propietaria de Casa</p>
+            </div>
+          </div>
+          <p class="text-gray-300 italic">"Renové mi casa con las puertas y ventanas de Roldan Aberturas. Su asesoramiento fue clave para el resultado final."</p>
+          <div class="flex mt-4">
+            <span class="text-yellow-400">★★★★★</span>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+  <!-- CONTACT FOOTER - MODERN DESIGN -->
+  <footer id="contacto" class="bg-slate-900 text-white py-20 border-t-2 border-teal-500">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-12 mb-16">
+        
+        <!-- Company Info -->
+        <div class="md:col-span-1">
+          <div class="flex items-center mb-8">
+            <div class="power-icon mr-4 pulse-blue">
+              <div class="text-white font-bold text-xl">⚡</div>
+            </div>
+            <h3 class="text-4xl font-bold poppins text-black-title">ROLDAN ABERTURAS</h3>
+          </div>
+          <p class="text-gray-300 mb-8 text-lg leading-relaxed">
+            Especialistas en puertas y ventanas en Godoy Cruz. Ofrecemos productos de alta calidad, instalación profesional y todo lo que necesitas para tu hogar o proyecto comercial.
+          </p>
+          <div class="flex space-x-4">
+            <div class="w-12 h-12 power-card rounded-full flex items-center justify-center">
+              <span class="text-teal-400">🚪</span>
+            </div>
+            <div class="w-12 h-12 power-card rounded-full flex items-center justify-center">
+              <span class="text-cyan-400">🪟</span>
+            </div>
+            <div class="w-12 h-12 power-card rounded-full flex items-center justify-center">
+              <span class="text-teal-500">🏠</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-2xl font-bold poppins text-light-blue mb-8">CONTACTO DIRECTO</h4>
+          <div class="space-y-6 text-gray-300">
+            <div class="flex items-start space-x-4">
+              <div class="power-icon">
+                <div class="text-white text-sm">📍</div>
+              </div>
+              <span>Lautaro 3500, Godoy Cruz</span>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="power-icon">
+                <div class="text-white text-sm">📞</div>
+              </div>
+              <a href="tel:+5492236328763" class="hover:text-teal-400 transition text-lg font-bold poppins">+5492236328763</a>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="power-icon">
+                <div class="text-white text-sm">✉️</div>
+              </div>
+              <a href="mailto:info@roldanaberturas.com" class="hover:text-teal-400 transition">info@roldanaberturas.com</a>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="power-icon">
+                <div class="text-white text-sm">🏢</div>
+              </div>
+              <span>CUIL: 20237139403</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Operating Hours -->
+        <div>
+          <h4 class="text-2xl font-bold poppins text-cyan-400 mb-8">HORARIOS DE ATENCIÓN</h4>
+          <div class="space-y-4 text-gray-300">
+            <div class="power-card p-4 rounded-lg">
+              <p class="font-bold text-teal-400 mb-2 poppins">SHOWROOM</p>
+              <p>Lun-Vie: 08:00-18:00</p>
+              <p>Sáb: 08:00-13:00</p>
+            </div>
+            <div class="power-card p-4 rounded-lg">
+              <p class="font-bold text-cyan-400 mb-2 poppins">INSTALACIONES</p>
+              <p>Lun-Vie: 08:00-17:00</p>
+              <p>Con cita previa</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t-2 border-teal-500 pt-12 text-center">
+        <div class="power-icon mx-auto mb-6 pulse-blue">
+          <div class="text-white font-bold text-xl">🏠</div>
+        </div>
+        <p class="text-teal-400 mb-3 text-xl font-bold poppins">ROLDAN ABERTURAS - ESPECIALISTAS EN PUERTAS Y VENTANAS</p>
+        <p class="text-gray-400">© 2024 Todos los derechos reservados | Transformamos tu hogar</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODERN WHATSAPP BUTTON -->
+  <a 
+    href="https://wa.me/5492236328763?text=¡Hola%20Roldan%20Aberturas!%20🚪%20Me%20interesa%20conocer%20sus%20productos%20y%20servicios" 
+    target="_blank"
+    class="fixed bottom-8 right-8 whatsapp-modern text-white p-6 rounded-full shadow-2xl z-50 transition-all duration-300 hover:scale-110 group"
+    aria-label="Contactar por WhatsApp"
+  >
+    <div class="relative">
+      <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
+      </svg>
+      <!-- Modern notification -->
+      <div class="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-full flex items-center justify-center text-xs font-bold pulse-blue">
+        🚪
+      </div>
+    </div>
+  </a>
+
+</body>
+</html>
